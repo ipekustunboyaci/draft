@@ -12,7 +12,8 @@ COPY . .
 EXPOSE 5000
 # Enviroment Variables
 ENV MODEL_REPO=/usr/src/myapp/models
-ENV DB_API=http://cleaned_db:5006/db_preprocessing/housing
+#ENV DB_API=http://cleaned_db:5006/db_preprocessing/housing
+ENV DB_API=http://db_api:5005/training-db/housing
 # Run our App
 CMD ["python3","app.py"]
 
