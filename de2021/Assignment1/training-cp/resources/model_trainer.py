@@ -30,7 +30,7 @@ def train(dataset):
     for i in range(10) :
 
         X_train, X_test, y_train, y_test = train_test_split(X, y, test_size = 0.2)
-        model = sm.OLS(y_train, X_train).fit()
+        model = sm.OLS(y_train.astype(float), X_train.astype(float)).fit()
         model_pred = model.predict(X_test)
         r2_vals.append(r2(y_test, model_pred))
 
