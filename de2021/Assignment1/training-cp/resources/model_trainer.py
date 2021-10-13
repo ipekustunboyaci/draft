@@ -41,7 +41,8 @@ def train(dataset):
 
     print('Mean R-Squared over 10 runs: ' + str(np.mean(r2_vals))) 
     print("")
-    text_out = {model.summary()}
+    text_out = {'Mean R-Squared over 10 runs:' :str(np.mean(r2_vals))
+    #text_out = {model.summary()}
 
     # Of all variables used in the model, two stand out to be particularly good for price prediction being Taxes and TotSqf
     # with both their standard error being ~7 and ~11 respectively. they are followed by PkgSpacs, having a standard 
